@@ -4,11 +4,63 @@
     box-sizing: border-box;
 }
 
-body {
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
     width: 100%;
-    height: inherit;
-    background-image: url(../images/bckgrd.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: rotate(90deg);
+    flex: 1;
+    background: url(../images/vert.webp) center/150% no-repeat;
+}
+
+@media screen and (min-width: 425px) {
+    div {
+        width: 100%;
+        flex: 1;
+        background: url(../images/vert.webp) center/100% no-repeat;
+    }
+}
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    div {
+        width: 100%;
+        flex: 1;
+        background: url(../images/bckgrd.webp) center/100% no-repeat;
+    }
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    div {
+        flex: 1;
+        background: url(../images/bckgrd.webp) center/140% no-repeat;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    div {
+        flex: 1;
+        background: url(../images/bckgrd.webp) center/110% no-repeat;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+       /* margin: 0 15% 0 15%;*/
+    }
+
+    div {
+        width: 100%;
+        flex:1;
+        background: url(../images/bckgrd.webp) center/100% no-repeat;
+        box-shadow: 5px 0px 20px;
+        box-shadow: 0px 5px 20px; 
+    }
 }
