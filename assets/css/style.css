@@ -21,8 +21,8 @@ html {
 
 #play-area {
     height: 100%;
-    margin: 8% 10% 10% 10%;
-    padding: 5%;
+    margin: 5% 10% 5% 10%;
+    padding: 4%;
     background: rgb(114, 120, 140, .7);
     position: relative;
     display: flex;
