@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -22,17 +24,70 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 13px;
+    border: solid white;
 }
+
 
 img {
     width: 100px;
+    margin-bottom: 10px;
+}
+
+/* blink code from stackoverflow << https://stackoverflow.com/questions/12115247/how-do-you-make-an-image-blink>> */
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#blink {
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 h1 {
-    /*flex-shrink: 1;
-    display: flex;
-    justify-content: center;*/
     margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
 p {
@@ -41,10 +96,17 @@ p {
     justify-content: center;
     text-align: center;
     margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 span {
+    width: 100%;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 input {
@@ -56,10 +118,34 @@ input {
 }
 
 button {
-    border-radius: 10% 10%;
-    width: 100px;
-    height: 50px;
+    /* Code from https://getcssscan.com/css-buttons-examples */
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* end of code */
+    margin-top: 10px;
 }
+
+.button:hover {
+    /* Code from https://getcssscan.com/css-buttons-examples */
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+     /* end of code */
+  }
+  
 
 @media screen and (min-width: 425px) {
 
@@ -89,6 +175,13 @@ button {
         flex: 1;
         background: url(../images/bckgrd.webp) center/160% no-repeat;
     }
+
+    span {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -100,6 +193,7 @@ button {
         flex: 1;
         background: url(../images/bckgrd.webp) center/130% no-repeat;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -112,4 +206,5 @@ button {
         /*box-shadow: 5px 0px 20px;
         box-shadow: 0px 5px 20px; */
     }
+
 }
