@@ -14,6 +14,9 @@ html {
     display: flex;
     flex-direction: column;
     background: url(../images/vert.webp) center/150% no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 #play-area {
@@ -26,7 +29,7 @@ html {
     flex-direction: column;
     align-items: center;
     border-radius: 13px;
-    border: solid white;
+    border: thick solid white;
 }
 
 
@@ -85,10 +88,10 @@ hr {
 
 h1 {
     margin-bottom: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
     text-transform: uppercase;
+    color: white;
+    background-color: #078C03;
+    padding: 0 5px 0 5px;
 }
 
 p {
@@ -100,6 +103,7 @@ p {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+    color: white;
 }
 
 span {
@@ -114,8 +118,25 @@ input {
     width: 57px;
     height: 57px;
     border-radius: 50%;
+    border-style: solid;
+    border-color: #95D904 #09A603;
+    border-width: 4px;
     margin: 3%;
     position: relative;
+    text-align: center;
+    font-size: 37px;
+}
+/* hide input arrows in Chrome, Safari, Edge, Opera */
+/* source of code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_hide_arrow_number>>*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hide input arrows in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 button {
