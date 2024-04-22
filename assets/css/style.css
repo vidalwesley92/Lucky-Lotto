@@ -170,20 +170,12 @@ button {
   }
   
 
-@-moz-document url-prefix() {
-    body,
-    html {
-        width: 100%;
-        flex: 1;
-        background: url(../images/vert.webp) center/136% no-repeat;
-    }
-}
 @media screen and (min-width: 425px) {
 
     body,
     html {
         width: 100%;
-        background: url(../images/vert.webp) center/129% no-repeat;
+        background: url(../images/vert.webp) center/136% no-repeat;
     }
 }
 
