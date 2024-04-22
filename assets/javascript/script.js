@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of generate) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "generate") {
-                console.log("generate")
+                console.log("generate");
                 //generateNumbers();
             } else {
-                console.log("reset")
+                console.log("reset");
                 //reset();
             }
         });
@@ -15,19 +15,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-/*
 function generateNumbers() {
-
     let num1 = Math.floor(Math.random() * 47) + 1;
     let num2 = Math.floor(Math.random() * 47) + 1;
     let num3 = Math.floor(Math.random() * 47) + 1;
     let num4 = Math.floor(Math.random() * 47) + 1;
     let num5 = Math.floor(Math.random() * 47) + 1;
     let num6 = Math.floor(Math.random() * 47) + 1;
-}*/
+}
 
 function compareNumbers() {
-
+    let userNumber = document.getElementsByTagName("input").value;
+    if (userNumber === "") {
+        console.log("?");
+    } else {
+        console.log("1");
+    }
 }
 
 function reset() {
