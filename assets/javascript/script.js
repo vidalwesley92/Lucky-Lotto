@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let lottoNumbers = [];
 
         // Generate six different random numbers between 1 and 47 using the function generateRandomNumber
+        // inspired by << https://stackoverflow.com/questions/62176298/how-to-approach-creating-array-of-random-numbers-with-no-repeats>>
         while (lottoNumbers.length < 6) {
             let randomNumber = generateRandomNumber();
             if (!lottoNumbers.includes(randomNumber)) {
@@ -36,3 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // restart button function
+
+document.querySelector('button[data-type="reset"]').addEventListener("click", function() {
+
+    document.getElementById('num1').value = "";
+        document.getElementById('num2').value = "";
+        document.getElementById('num3').value = "";
+        document.getElementById('num4').value = "";
+        document.getElementById('num5').value = "";
+        document.getElementById('num6').value = "";
+});
