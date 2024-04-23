@@ -1,19 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    function generateNumbers() {
-
-        let num1 = Math.floor(Math.random() * 47) + 1;
-        let num2 = Math.floor(Math.random() * 47) + 1;
-        let num3 = Math.floor(Math.random() * 47) + 1;
-        let num4 = Math.floor(Math.random() * 47) + 1;
-        let num5 = Math.floor(Math.random() * 47) + 1;
-        let num6 = Math.floor(Math.random() * 47) + 1;
-
-        return lottoNumbers = [num1, num2, num3, num4, num5, num6];
+document.addEventListener("DOMContentLoaded", function() {
+// generate random numbers.
+    function generateRandomNumber() {
+        return Math.floor(Math.random() * 47) + 1;
     }
 
-    function uniqueNumbers() {
-        let unique = 
+// generate lotto numbers that are not equal another inside of the array
+    function generateLottoNumbers() {
+
+// Array that will store the generated numbers
+        let lottoNumbers = [];
+
+        // Generate six different random numbers between 1 and 47 using the function generateRandomNumber
+        while (lottoNumbers.length < 6) {
+            let randomNumber = generateRandomNumber();
+            if (!lottoNumbers.includes(randomNumber)) {
+                lottoNumbers.push(randomNumber);
+            }
+        }
+
+// Replaces the values inside the inputs with the generated numbers
+        document.getElementById('num1').value = lottoNumbers[0];
+        document.getElementById('num2').value = lottoNumbers[1];
+        document.getElementById('num3').value = lottoNumbers[2];
+        document.getElementById('num4').value = lottoNumbers[3];
+        document.getElementById('num5').value = lottoNumbers[4];
+        document.getElementById('num6').value = lottoNumbers[5];
     }
 
-})   
+
+// Event listener for the "GENERATE" button
+    document.querySelector('button[data-type="generate"]').addEventListener("click", function() {
+        generateLottoNumbers();
+    });
+
+});
+
+// restart button function
