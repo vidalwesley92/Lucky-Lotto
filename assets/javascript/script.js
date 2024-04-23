@@ -1,38 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let generate = document.getElementsByTagName("button"); 
+   
+    function generateNumbers() {
+        let newNumbers = Math.floor(Math.random() * 47) + 1;
+    } 
 
-    for (let button of generate) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "generate") {
-                console.log("generate");
-                //generateNumbers();
-            } else {
-                console.log("reset");
-                //reset();
+    function generateSixNumbers(){
+        let sixNumbers = [];
+    
+        while(sixNumbers.length<6) {
+            let randomNumbers = generateRandomNumber();
+            if (!sixNumbers.includes(randomNumber)) {
+                sixNumbers.push(randomNumber);
             }
-        });
+        }
+    
+        document.getElementsById("num1").value = sixNumbers[0];
+        document.getElementsById("num2").value = sixNumbers[1];
+        document.getElementsById("num3").value = sixNumbers[2];
+        document.getElementsById("num4").value = sixNumbers[3];
+        document.getElementsById("num5").value = sixNumbers[4];
+        document.getElementsById("num6").value = sixNumbers[5];
     }
-
-});
-
-function generateNumbers() {
-    let num1 = Math.floor(Math.random() * 47) + 1;
-    let num2 = Math.floor(Math.random() * 47) + 1;
-    let num3 = Math.floor(Math.random() * 47) + 1;
-    let num4 = Math.floor(Math.random() * 47) + 1;
-    let num5 = Math.floor(Math.random() * 47) + 1;
-    let num6 = Math.floor(Math.random() * 47) + 1;
-}
-
-function compareNumbers() {
-    let userNumber = document.getElementsByTagName("input").value;
-    if (userNumber === "") {
-        console.log("?");
-    } else {
-        console.log("1");
-    }
-}
-
-function reset() {
-
-}
+})   
