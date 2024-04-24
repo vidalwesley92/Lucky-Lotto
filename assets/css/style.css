@@ -196,7 +196,7 @@ button {
     html {
         width: 100%;
         flex: 1;
-        background: url(../images/bckgrd.webp) center/160% no-repeat;
+        background: url(../images/vert.webp) center/160% no-repeat;
     }
 
     span {
