@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
 // generate lotto numbers that are not equal another inside of the array
     function generateLottoNumbers() {
 
-// Array that will store the generated numbers
         let lottoNumbers = [];
 
         // Generate six different random numbers between 1 and 47 using the function generateRandomNumber
