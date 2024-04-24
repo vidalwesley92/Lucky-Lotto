@@ -128,3 +128,164 @@ The Lucky Lotto page have the following feature:
 In this section of the README, various tests that the website underwent are showcased to assess its functionality.
 Each test provides valuable insights into the website's performance, functionality, and areas that require attention for future enhancements and optimizations.
 
+## Code Validation
+
+All codes have been validated successfully. The HTML passed through the [W3C HTML Validator](https://validator.w3.org/), the CSS through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the CSS through the [JS Hint Validator](https://jshint.com/). The following images display their respective validation results.
+
+<details>
+<summary>HTML Validation</summary>
+
+![HTML page](readme-assets/htmlValidation.png)
+
+</details>
+
+<details>
+<summary>Javascript Validation</summary>
+
+![JS page](readme-assets/jsValidation.png)
+
+</details>
+
+<details>
+<summary>CSS Validation</summary>
+
+![CSS page](readme-assets/cssValidation.png)
+
+</details>
+
+## Responsiveness
+
+
+In order to assess the responsiveness of the website, it was tested across various browsers and screen sizes, ranging from mobile phones screens to desktop screens. Overall, the results were positive, with only one major bug identified.
+
+The bug was discovered while running the page through [Am I Respnsive](https://ui.dev/amiresponsive), where I discovered that the background would not cover the whole screen on Ipads, even though it showed something different in devTools. Thanks to the Stack Overflow community, a solution was found. The solution involved applying a media query that would be specific for the  dimensions of Ipads ([Read Bugs](#Bugs)).
+
+While the website performed well and displayed as expected across different browsers and screen sizes, another bug was identified specifically on phones in landscape mode. Further details about this bug can be found in [ Bugs](#Bugs).
+
+## Lighthouse Testing
+
+The page was subjected to the Lighthouse test to assess its quality and identify areas for improvement. The following images display the results of the test for both the mobile and desktop versions.
+
+<details>
+<summary>Lighthouse Mobile Test</summary>
+
+![Lighthouse Mobile Test](readme-assets/mobile-test.png)
+
+</details>
+
+<details>
+<summary>Lighthouse Desktop Test</summary>
+
+![Lighthouse Desktop Test](readme-assets/desktop-test.png)
+
+</details>
+<br/> 
+The test results showed that the Lucky Lotto page achieved a high score, indicating excellent performance across various metrics. This outcome signifies that the website excels in areas such as performance, accessibility, best practices, and SEO.
+
+## Accessibility Testing
+
+After running the page through the [Wave Accessibility Evaluation Tool](https://wave.webaim.org/),  the following results were obtained.
+
+<details>
+<summary>Page Test</summary>
+
+![Home Page Test](readme-assets/waveTest.png)
+
+</details>
+<br>
+After running the Lucky Lotto page through the accessibility test Wave, a few errors were identified. While some of these errors may be deemed irrelevant to the project's goals and can be ignored, it's crucial to address issues related to contrast errors.
+
+Contrast errors impact the readability and usability of the website, potentially hindering the user experience. Improving contrast ensures that text and elements are easily distinguishable, particularly for users with visual impairments or those viewing the website in suboptimal conditions.
+
+Therefore, while other errors may not be a priority, addressing contrast errors should be considered in future iterations of the project to enhance the overall user experience and accessibility of the Lucky Lotto website.
+
+## Manual Testing
+
+Manual testing was conducted by myself, along with a friend and several coworkers and their devices. This collaborative effort resulted in gathering valuable information, ranging from identifying bugs to outlining future improvements for the website. Below is a table summarizing the testing processes, expectations, and results:
+
+| Feature | Expectation | Action | Result |
+|---------|-------------|--------|--------|
+| Page Responsiveness | Fill the whole screen when resized | resize | Page fills whole screen when resized|
+| Buttons Generate| creation of six random and unique numbers, that range from 1 to 47 is expected  | Click | Six random and unique numbers were created |
+| Retain user input | Collect user input and add to the number generator process | click | the iteration of user input with the generation of new number did not occur|
+| Button Reset| clear input field| click | Input fields were cleared|
+
+[Go to top ⇧](#Lucky-Lotto)
+
+# Bugs
+
+During testing, several bugs were discovered, leading to malfunctions in certain features of the page. Below are some of the identified bugs along with their respective solutions.
+
+| Bug Description | Browser/ Devices | Severity | Status/ Solution |
+|-----------------|------------------|----------|--------|
+|Unable to change make background image fit the whole screen for Ipads. | Ipads | Major | Fixed. Used a altered version of a media query found on [Stack Overflow](https://stackoverflow.com/questions/41978487/what-is-correct-media-query-for-ipad-pro).  |
+| Unable to not genarate duplicates of the same number. | All | Major | Fixed. Used a altered version of a line of code found on [Stack Overflow](https://stackoverflow.com/questions/62176298/how-to-approach-creating-array-of-random-numbers-with-no-repeats) |
+Unable to keep user's input when hitting the generate button | all |  Minor | To be Fixed. The user can write their number, but once they click on the generate button, their input disappears.|
+|Landscape mode on mobile creates white bars on the sides. | Mobile | Minor | To be fixed.|
+
+[Go to top ⇧](#Lucky-Lotto)
+
+# Technologies Used
+
+### Laguagues used
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Frameworks, libraries etc
+
+* [Google Fonts](https://fonts.google.com/);
+* [GitPod](https://gitpod.io/);
+* [GitHub](https://github.com/);
+* [jsfiddle](https://jsfiddle.net/)
+* [MDN Web Docs](https://developer.mozilla.org/);
+* [W3School Color Converter](https://www.w3schools.com/colors/colors_converter.asp)
+
+[Go to top ⇧](#Lucky-Lotto)
+
+# Deployment
+
+To deploy this project's repository, follow these steps:
+
+1. Go to the Baiana repository on GitHub.
+2. Ensure that the HTML, CSS files, and the assets folder are in the repository.
+3. Navigate to the repository's navigation bar and open the "Settings" section.
+4. In the side menu, locate the "Pages" section and open it.
+5. Under the "Source" section, select "Deploy from the main branch".
+6. In the Branch section, select "main".
+7. Next to the branch options, select the Root folder.
+8. After selecting the branch and the folder, click "Save".
+9. Once saved, return to the repository and locate the deployments section on the right side of the page, then open it.
+10. After opening, the deployed link will be displayed under the title "All deployments" with the following structure: https://vidalwesley92.github.io/Lucky-Lotto/.
+
+[Go to top ⇧](#Lucky-Lotto)
+
+# Credits 
+
+through out this project many resources was utilised in order to complete it. Here are the names of the resource que there due credit.
+
+| resources | Credit|
+|-----------|-------|
+| ChatGPT | The text, grammar, and spelling were refined, and copyright considerations were addressed with the assistance of ChatGPT. |
+| Favicon.io | Fast creation of all favicons necessary for the project. |
+| Freepik | Offering a vast collection of free and premium graphic resources |
+| Stack overflow | Collection of questions and answers helping with debuging. |
+| Love-Math |Reference for coding workflow and good practices. |
+
+[Go to top ⇧](#Lucky-Lotto)
+
+# Acknowledgements
+
+Speacial thank you to:
+
+* Amy, our cohort facilitator, for her availability, assistance, and encouragement throughout all the stages of this project;
+
+* Seun Owonikoko deserves immense appreciation for her invaluable contributions, guidance, and insights that have seamlessly integrated into my workflow.
+
+* Friends and colleagues for all the help provided during testing.
+
+[Go to top ⇧](#Lucky-Lotto)
+
+
+
