@@ -207,6 +207,27 @@ button {
     }
 }
 
+/* Landscape*/
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    
+    body,
+    html {
+        width: 100%;
+        flex: 1;
+        background: url(../images/bckgrd.webp) center/130% no-repeat;
+    }
+}
+
+/* Portrait*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    body,
+    html {
+        width: 100%;
+        flex: 1;
+        background: url(../images/vert.webp) center/160% no-repeat;
+    }
+}
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 
@@ -214,7 +235,7 @@ button {
     html {
         width: 100%;
         flex: 1;
-        background: url(../images/bckgrd.webp) center/130% no-repeat;
+        background: url(../images/bckgrd.webp) center/170% no-repeat;
     }
 
 }
